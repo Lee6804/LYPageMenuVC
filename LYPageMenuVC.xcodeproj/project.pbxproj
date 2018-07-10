@@ -15,6 +15,7 @@
 		9B4EB80E20F457E900735D13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4EB80D20F457E900735D13 /* main.m */; };
 		9B4EB81820F457E900735D13 /* LYPageMenuVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4EB81720F457E900735D13 /* LYPageMenuVCTests.m */; };
 		9B4EB82320F457E900735D13 /* LYPageMenuVCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4EB82220F457E900735D13 /* LYPageMenuVCUITests.m */; };
+		9B4EB83220F4594A00735D13 /* LYBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4EB83120F4594A00735D13 /* LYBtn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		9B4EB81E20F457E900735D13 /* LYPageMenuVCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYPageMenuVCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4EB82220F457E900735D13 /* LYPageMenuVCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPageMenuVCUITests.m; sourceTree = "<group>"; };
 		9B4EB82420F457E900735D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B4EB83020F4594A00735D13 /* LYBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYBtn.h; sourceTree = "<group>"; };
+		9B4EB83120F4594A00735D13 /* LYBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYBtn.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				9B4EB7FF20F457E700735D13 /* AppDelegate.m */,
 				9B4EB80120F457E700735D13 /* ViewController.h */,
 				9B4EB80220F457E700735D13 /* ViewController.m */,
+				9B4EB83020F4594A00735D13 /* LYBtn.h */,
+				9B4EB83120F4594A00735D13 /* LYBtn.m */,
 				9B4EB80420F457E700735D13 /* Main.storyboard */,
 				9B4EB80720F457E800735D13 /* Assets.xcassets */,
 				9B4EB80920F457E800735D13 /* LaunchScreen.storyboard */,
@@ -265,6 +270,7 @@
 				9B4EB80320F457E700735D13 /* ViewController.m in Sources */,
 				9B4EB80E20F457E900735D13 /* main.m in Sources */,
 				9B4EB80020F457E700735D13 /* AppDelegate.m in Sources */,
+				9B4EB83220F4594A00735D13 /* LYBtn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
