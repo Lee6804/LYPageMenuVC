@@ -96,7 +96,7 @@
     }
     self.menuScrollView.contentSize = CGSizeMake(self.totalBtnWidth, 0);
     ((UIButton *)[self.mutBtnArr objectAtIndex:0]).selected = YES;
-    ((UIButton *)[self.mutBtnArr objectAtIndex:0]).titleLabel.font = [UIFont systemFontOfSize:BTSFont];
+    ((UIButton *)[self.mutBtnArr objectAtIndex:0]).titleLabel.font = [UIFont boldSystemFontOfSize:BTSFont];
     UIView *colorLine = [[UIView alloc] initWithFrame:CGRectMake(((UIButton *)[self.mutBtnArr objectAtIndex:0]).frame.size.width/2 - LineW/2 + ((UIButton *)[self.mutBtnArr objectAtIndex:0]).frame.origin.x, VHeight - 2, LineW, 2)];
     colorLine.backgroundColor = BSColor;
     self.colorLine = colorLine;
@@ -116,11 +116,11 @@
     [self.bgScrollView setContentOffset:CGPointMake(button.tag*MainWidth, 0) animated:(b-a == 1 || b-a == -1) ? YES : NO];
     
     [self.mutBtnArr enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        obj.titleLabel.font = [UIFont systemFontOfSize:15];
+        obj.titleLabel.font = [UIFont systemFontOfSize:BTNFont];
         obj.selected = NO;
     }];
     button.selected = YES;
-    button.titleLabel.font = [UIFont systemFontOfSize:17];
+    button.titleLabel.font = [UIFont boldSystemFontOfSize:BTSFont];
     
     [self moveLineWithBtn:button];
     
@@ -188,7 +188,7 @@
             return;
         }
         
-        //防止scrollView处于第一个的时候手势返回不能立马凑效，权宜之计而已
+        //防止scrollView处于第一个的时候手势返回不能立马凑效(有略微的抖动现象)，权宜之计而已
         if (scrollView.contentOffset.x <= -0.000001 ){
             scrollView.bounces = NO;
         }else if (scrollView.contentOffset.x > 0 ){
@@ -199,10 +199,10 @@
 //        NSLog(@"offsetX/MainWidth = %f",offsetX/MainWidth);
         [self.mutBtnArr enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL * _Nonnull stop) {
             obj.selected = NO;
-            obj.titleLabel.font = [UIFont systemFontOfSize:15];
+            obj.titleLabel.font = [UIFont systemFontOfSize:BTNFont];
             if (idx == offsetX/MainWidth) {
                 obj.selected = YES;
-                obj.titleLabel.font = [UIFont systemFontOfSize:17];
+                obj.titleLabel.font = [UIFont boldSystemFontOfSize:BTSFont];
                 [self moveLineWithBtn:obj];
             }
         }];

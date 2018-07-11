@@ -71,9 +71,9 @@
     //添加VC
     for (NSInteger i = 0; i < titleArr.count; i++) {
         OneViewController *oneVC = [[OneViewController alloc] init];
+        oneVC.view.frame = CGRectMake(MainWidth*i, 0, MainWidth, self.scrollView.frame.size.height);
         [self addChildViewController:oneVC];
         [self.scrollView addSubview:oneVC.view];
-        oneVC.view.frame = CGRectMake(MainWidth*i, 0, MainWidth, self.scrollView.frame.size.height);
     }
 }
 

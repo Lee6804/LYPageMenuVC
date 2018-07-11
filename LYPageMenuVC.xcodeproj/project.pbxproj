@@ -116,11 +116,11 @@
 		9B4EB7FD20F457E700735D13 /* LYPageMenuVC */ = {
 			isa = PBXGroup;
 			children = (
+				9B16B7BB20F5DB440084259C /* LYPageMenuView */,
 				9B4EB7FE20F457E700735D13 /* AppDelegate.h */,
 				9B4EB7FF20F457E700735D13 /* AppDelegate.m */,
 				9B4EB80120F457E700735D13 /* ViewController.h */,
 				9B4EB80220F457E700735D13 /* ViewController.m */,
-				9B16B7BB20F5DB440084259C /* LYPageMenuView */,
 				9B16B7B820F5D73C0084259C /* OneViewController.h */,
 				9B16B7B920F5D73C0084259C /* OneViewController.m */,
 				9B4EB80420F457E700735D13 /* Main.storyboard */,
