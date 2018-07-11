@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LYBtn.h"
+#import "OneViewController.h"
 
 #define MainWidth [UIScreen mainScreen].bounds.size.width
 #define MainHeight [UIScreen mainScreen].bounds.size.height
@@ -21,10 +22,18 @@
 @interface ViewController ()<UIScrollViewDelegate>
 
 @property(nonatomic,strong)UIScrollView *scrollView;
+@property(nonatomic,strong)NSMutableArray *myChildVCS;
 
 @end
 
 @implementation ViewController
+
+-(NSMutableArray *)myChildVCS{
+    if (!_myChildVCS) {
+        _myChildVCS = [NSMutableArray array];
+    }
+    return _myChildVCS;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,19 +52,29 @@
     scrollView.delegate = self;
     scrollView.pagingEnabled = YES;
     scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.contentSize = CGSizeMake(titleArr.count*MainWidth, 0);
     [self.view addSubview:scrollView];
     _scrollView = scrollView;
     
     // 这一行赋值，可实现pageMenu的跟踪器时刻跟随scrollView滑动的效果
     btnView.bgScrollView = self.scrollView;
     
-    for (NSInteger i = 0; i < titleArr.count; i ++) {
+    /*添加View
+     
+    for (NSInteger i = 0; i < titleArr.count; i++) {
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(i * MainWidth, 0, MainWidth, self.scrollView.frame.size.height)];
         view.backgroundColor = [UIColor colorWithRed:(arc4random() % 256)/255.0 green:(arc4random() % 256)/255.0 blue:(arc4random() % 256)/255.0 alpha:1];
         [self.scrollView addSubview:view];
-        self.scrollView.contentSize = CGSizeMake(i*MainWidth, 0);
     }
+     */
     
+    //添加VC
+    for (NSInteger i = 0; i < titleArr.count; i++) {
+        OneViewController *oneVC = [[OneViewController alloc] init];
+        [self addChildViewController:oneVC];
+        [self.scrollView addSubview:oneVC.view];
+        oneVC.view.frame = CGRectMake(MainWidth*i, 0, MainWidth, self.scrollView.frame.size.height);
+    }
 }
 
 

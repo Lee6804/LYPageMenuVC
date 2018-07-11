@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B16B7BA20F5D73C0084259C /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B16B7B920F5D73C0084259C /* OneViewController.m */; };
 		9B4EB80020F457E700735D13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4EB7FF20F457E700735D13 /* AppDelegate.m */; };
 		9B4EB80320F457E700735D13 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4EB80220F457E700735D13 /* ViewController.m */; };
 		9B4EB80620F457E700735D13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4EB80420F457E700735D13 /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B16B7B820F5D73C0084259C /* OneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
+		9B16B7B920F5D73C0084259C /* OneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
 		9B4EB7FB20F457E700735D13 /* LYPageMenuVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYPageMenuVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4EB7FE20F457E700735D13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9B4EB7FF20F457E700735D13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B16B7BB20F5DB440084259C /* LYPageMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				9B4EB83020F4594A00735D13 /* LYBtn.h */,
+				9B4EB83120F4594A00735D13 /* LYBtn.m */,
+			);
+			path = LYPageMenuView;
+			sourceTree = "<group>";
+		};
 		9B4EB7F220F457E700735D13 = {
 			isa = PBXGroup;
 			children = (
@@ -108,8 +120,9 @@
 				9B4EB7FF20F457E700735D13 /* AppDelegate.m */,
 				9B4EB80120F457E700735D13 /* ViewController.h */,
 				9B4EB80220F457E700735D13 /* ViewController.m */,
-				9B4EB83020F4594A00735D13 /* LYBtn.h */,
-				9B4EB83120F4594A00735D13 /* LYBtn.m */,
+				9B16B7BB20F5DB440084259C /* LYPageMenuView */,
+				9B16B7B820F5D73C0084259C /* OneViewController.h */,
+				9B16B7B920F5D73C0084259C /* OneViewController.m */,
 				9B4EB80420F457E700735D13 /* Main.storyboard */,
 				9B4EB80720F457E800735D13 /* Assets.xcassets */,
 				9B4EB80920F457E800735D13 /* LaunchScreen.storyboard */,
@@ -268,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B4EB80320F457E700735D13 /* ViewController.m in Sources */,
+				9B16B7BA20F5D73C0084259C /* OneViewController.m in Sources */,
 				9B4EB80E20F457E900735D13 /* main.m in Sources */,
 				9B4EB80020F457E700735D13 /* AppDelegate.m in Sources */,
 				9B4EB83220F4594A00735D13 /* LYBtn.m in Sources */,

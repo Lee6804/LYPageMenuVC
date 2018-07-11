@@ -159,7 +159,6 @@
     return labelSize;
 }
 
-
 #pragma mark - setter
 - (void)setBgScrollView:(UIScrollView *)bgScrollView {
     _bgScrollView = bgScrollView;
@@ -184,12 +183,20 @@
 
 - (void)beginMoveTrackerFollowScrollView:(UIScrollView *)scrollView {
     if (scrollView == self.bgScrollView) {
-        //如果不是滑动bgScrollView，则不执行
+        //如果响应时间不是滑动bgScrollView，则不继续往下执行
         if (!scrollView.dragging && !scrollView.decelerating) {
             return;
         }
+        
+        //防止scrollView处于第一个的时候手势返回不能立马凑效，权宜之计而已
+        if (scrollView.contentOffset.x <= -0.000001 ){
+            scrollView.bounces = NO;
+        }else if (scrollView.contentOffset.x > 0 ){
+            scrollView.bounces = YES;
+        }
+        
         CGFloat offsetX = scrollView.contentOffset.x;
-//        NSLog(@"%f",offsetX/MainWidth);
+//        NSLog(@"offsetX/MainWidth = %f",offsetX/MainWidth);
         [self.mutBtnArr enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL * _Nonnull stop) {
             obj.selected = NO;
             obj.titleLabel.font = [UIFont systemFontOfSize:15];
@@ -203,6 +210,7 @@
 }
 
 - (void)dealloc {
+    NSLog(@"%@--dealloc",[self class]);
     [self.bgScrollView removeObserver:self forKeyPath:scrollViewContentOffset];
 }
 
