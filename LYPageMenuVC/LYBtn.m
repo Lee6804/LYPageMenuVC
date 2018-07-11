@@ -152,7 +152,6 @@
         offSetX = maxOffsetX;
     }
     [self.menuScrollView setContentOffset:CGPointMake(offSetX, 0) animated:YES];
-//    self.isClick = NO;
 }
 
 - (CGRect)getSize:(CGFloat)lessWidth str:(NSString *)str{
@@ -172,7 +171,6 @@
 }
 
 #pragma mark - KVO
-
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if (object == self.bgScrollView) {
         if ([keyPath isEqualToString:scrollViewContentOffset]) {
